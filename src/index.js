@@ -59,3 +59,8 @@ if (!!mainContent) {
     const recents = document.getElementById('recents-content');
     recents.innerHTML = items.map(animatedPosterCard).join('');
 }
+
+/* only for other page */
+const mainDiscover = document.getElementById('main-discover');
+if (!!mainDiscover) {
+}
