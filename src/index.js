@@ -1,6 +1,7 @@
 import { api } from './api/api.js';
 import { navbarItem } from './components/navbar.js';
 import { mainFooter } from './components/footer.js';
+import { carouselItem } from './components/carousel.js';
 
 const navItems = [
     {
@@ -43,6 +44,10 @@ footer.innerHTML = mainFooter();
 /* only for index page */
 const mainContent = document.getElementById('main-content');
 if (!!mainContent) {
-    const carousel = document.getElementById('carousel');
-    carousel.innerHTML = 'CAROUSEL';
+    const carousel = document.getElementById('carousel-content');
+    const items = api.getAll({ limit: 5, random: true }).map((item, index) => ({
+        ...item,
+        active: index === 0,
+    }));
+    carousel.innerHTML = items.map(carouselItem).join('');
 }
