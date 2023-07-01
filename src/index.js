@@ -2,6 +2,7 @@ import { api } from './api/api.js';
 import { navbarItem } from './components/navbar.js';
 import { mainFooter } from './components/footer.js';
 import { carouselItem } from './components/carousel.js';
+import { posterCard } from './components/card.js';
 
 const navItems = [
     {
@@ -44,10 +45,17 @@ footer.innerHTML = mainFooter();
 /* only for index page */
 const mainContent = document.getElementById('main-content');
 if (!!mainContent) {
-    const carousel = document.getElementById('carousel-content');
-    const items = api.getAll({ limit: 5, random: true }).map((item, index) => ({
+    const items = api.getAll({ limit: 20, random: true }).map((item, index) => ({
         ...item,
+        index,
         active: index === 0,
+        inMainScreen: true,
     }));
+    /* carousel */
+    const carousel = document.getElementById('carousel-content');
     carousel.innerHTML = items.map(carouselItem).join('');
+
+    /* recent movies/tv */
+    const recents = document.getElementById('recents-content');
+    recents.innerHTML = items.map(posterCard).join('');
 }
