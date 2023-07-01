@@ -80,7 +80,53 @@ if (!!mainDiscover) {
     /* default sort */
     items.sort((a, b) => b.release_date - a.release_date);
 
-    /* recent movies/tv */
-    const recents = document.getElementById('content-discover');
-    recents.innerHTML = items.map(posterCard).join('');
+    const search = {
+        title: '',
+        year: '',
+        type: '',
+    };
+
+    let showItems = [...items];
+
+    const updateFilter = () => {
+        showItems = items.filter((item) => {
+            const filter = {
+                return: true,
+            };
+
+            for (const att of Object.keys(search)) {
+                if (search[att] !== '') {
+                    filter.return = filter.return && item[att].toString().toLowerCase().includes(search[att]);
+                }
+            }
+
+            return filter.return;
+        });
+
+        /* recent movies/tv */
+        const recents = document.getElementById('content-discover');
+        recents.innerHTML = showItems.map(posterCard).join('');
+    };
+
+    updateFilter(); // on mount
+
+    /* bind inputs */
+    const searchInput = document.getElementById('input-main-search');
+    searchInput &&
+        searchInput.addEventListener('input', () => {
+            search.title = searchInput.value;
+            updateFilter();
+        });
+    const yearInput = document.getElementById('input-year-search');
+    yearInput &&
+        yearInput.addEventListener('input', () => {
+            search.year = yearInput.value;
+            updateFilter();
+        });
+    const typeSelect = document.getElementById('input-type-select');
+    typeSelect &&
+        typeSelect.addEventListener('change', () => {
+            search.type = typeSelect.value;
+            updateFilter();
+        });
 }
