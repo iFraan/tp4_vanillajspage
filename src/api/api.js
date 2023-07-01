@@ -1,6 +1,6 @@
 import DATA from './data.js';
 
-export const items = {
+export const api = {
     getMovies: () => {
         return DATA.filter((item) => item.type === 'MOVIE');
     },
