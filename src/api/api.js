@@ -7,7 +7,9 @@ export const api = {
     getTv: () => {
         return DATA.filter((item) => item.type === 'TV');
     },
-    getAll: ({ limit = 10 }) => {
-        return DATA.slice(0, limit);
+    getAll: ({ limit = 10, random = false }) => {
+        const data = [...DATA];
+        if (random) data.sort(() => Math.random() - 0.5);
+        return data.slice(0, limit);
     },
 };
