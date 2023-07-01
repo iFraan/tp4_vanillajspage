@@ -1,4 +1,4 @@
-export const posterCard = (item) => {
+export const animatedPosterCard = (item) => {
     return `
     <div class="transition-all relative h-96 w-32 hover:w-56 hover:shrink-0" ${item.inMainScreen && `data-target="#main-carousel" data-slide-to="${item.index}"`}>
         <img class="absolute object-cover object-[center_top] h-full w-full rounded-2xl" src="${item.poster}" alt="${item.title}" />

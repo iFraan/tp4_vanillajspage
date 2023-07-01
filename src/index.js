@@ -2,7 +2,7 @@ import { api } from './api/api.js';
 import { navbarItem } from './components/navbar.js';
 import { mainFooter } from './components/footer.js';
 import { carouselItem } from './components/carousel.js';
-import { posterCard } from './components/card.js';
+import { animatedPosterCard } from './components/card.js';
 
 const navItems = [
     {
@@ -57,5 +57,5 @@ if (!!mainContent) {
 
     /* recent movies/tv */
     const recents = document.getElementById('recents-content');
-    recents.innerHTML = items.map(posterCard).join('');
+    recents.innerHTML = items.map(animatedPosterCard).join('');
 }
