@@ -11,7 +11,7 @@ export const navbarItem = ({ name, href, grow = false }) => {
         font-bold
         ${grow && 'grow bg-slate-800/50'}
     "
-    href={${href}}
+    href="${href}"
     >
         ${name}
     </a>
