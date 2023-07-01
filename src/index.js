@@ -2,7 +2,7 @@ import { api } from './api/api.js';
 import { navbarItem } from './components/navbar.js';
 import { mainFooter } from './components/footer.js';
 import { carouselItem } from './components/carousel.js';
-import { animatedPosterCard } from './components/card.js';
+import { animatedPosterCard, posterCard } from './components/card.js';
 
 const navItems = [
     {
@@ -60,7 +60,27 @@ if (!!mainContent) {
     recents.innerHTML = items.map(animatedPosterCard).join('');
 }
 
-/* only for other page */
+/* only for others pages */
 const mainDiscover = document.getElementById('main-discover');
 if (!!mainDiscover) {
+    const from = document.location.pathname.replace('/', '').replace('.html', '');
+    const items = [];
+    switch (from) {
+        case 'movies':
+            items.push(...api.getMovies());
+            break;
+        case 'tv':
+            items.push(...api.getTv());
+            break;
+        default:
+            items.push(...api.getAll({ limit: 999 }));
+            break;
+    }
+
+    /* default sort */
+    items.sort((a, b) => b.release_date - a.release_date);
+
+    /* recent movies/tv */
+    const recents = document.getElementById('content-discover');
+    recents.innerHTML = items.map(posterCard).join('');
 }
