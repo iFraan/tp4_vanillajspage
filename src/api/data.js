@@ -36,15 +36,6 @@ const TV_ITEMS = [
         vote: 7.9,
     },
     {
-        title: 'Al rojo vivo',
-        original_title: 'Al rojo vivo',
-        release_date: '2011-01-10',
-        type: 'TV',
-        poster: 'https://image.tmdb.org/t/p/original/ag6PmoBxkF2s1uY3An618NCEt3g.jpg',
-        backdrop: 'https://image.tmdb.org/t/p/original/69Jblm3seQgiPuPQMrJqg9Nxhaz.jpg',
-        vote: 2.9,
-    },
-    {
         title: 'Pânico Jovem Pan',
         original_title: 'Pânico Jovem Pan',
         release_date: '2021-01-26',
