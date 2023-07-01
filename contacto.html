@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Contacto</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- FontAwesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    </head>
+    <body class="bg-slate-950 flex flex-col justify-between w-[98vw] h-[100vh] items-center text-white">
+        <!-- Navbar -->
+        <nav class="flex w-full justify-between gap-3 p-2" id="navbar"></nav>
+        <!-- Content -->
+        <div class="flex flex-col grow w-full justify-center items-center py-3 px-3 gap-5" id="main-contact">
+            <div class="flex justify-around w-full items-center">
+                <div class="container mx-auto my-4 px-8">
+                    <div class="w-full p-8 my-4 mx-auto bg-slate-950 rounded-2xl shadow-xl shadow-black">
+                        <div class="flex justify-center">
+                            <h1 class="font-bold uppercase text-5xl">Mandame un mensaje</h1>
+                        </div>
+                        <div class="grid grid-cols-1 gap-5 mt-5">
+                            <input class="w-full bg-slate-900 text-gray-400 mt-2 p-3 rounded-md focus:outline-none focus:shadow-outline" type="text" placeholder="Nombre" />
+                            <input class="w-full bg-slate-900 text-gray-400 mt-2 p-3 rounded-md focus:outline-none focus:shadow-outline" type="text" placeholder="Apellido" />
+                            <input class="w-full bg-slate-900 text-gray-400 mt-2 p-3 rounded-md focus:outline-none focus:shadow-outline" type="email" placeholder="E-mail" />
+                        </div>
+                        <div class="my-4">
+                            <textarea placeholder="Mensaje" class="w-full h-32 bg-slate-900 text-gray-400 mt-2 p-3 rounded-md focus:outline-none focus:shadow-outline"></textarea>
+                        </div>
+                        <div class="my-2 w-full">
+                            <button class="uppercase text-sm font-bold bg-slate-200 text-slate-900 p-3 rounded-md w-full focus:outline-none focus:shadow-outline">Enviar mensaje</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer id="main-footer">Footer</footer>
+    </body>
+    <script type="module" src="src/index.js"></script>
+</html>
