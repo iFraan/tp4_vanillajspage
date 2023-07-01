@@ -63,9 +63,9 @@ if (!!mainContent) {
 /* only for others pages */
 const mainDiscover = document.getElementById('main-discover');
 if (!!mainDiscover) {
-    const from = document.location.pathname.replace('/', '').replace('.html', '');
+    const [from] = document.location.pathname.split('/').reverse();
     const items = [];
-    switch (from) {
+    switch (from.replace('.html', '')) {
         case 'movies':
             items.push(...api.getMovies());
             break;
