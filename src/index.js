@@ -96,7 +96,7 @@ if (!!mainDiscover) {
 
             for (const att of Object.keys(search)) {
                 if (search[att] !== '') {
-                    filter.return = filter.return && item[att].toString().toLowerCase().includes(search[att]);
+                    filter.return = filter.return && item[att].toString().toLowerCase().includes(search[att].toString().toLowerCase());
                 }
             }
 
