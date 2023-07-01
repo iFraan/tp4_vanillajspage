@@ -18,15 +18,6 @@ const TV_ITEMS = [
         vote: 5.3,
     },
     {
-        title: 'Noticias Diarias',
-        original_title: 'Tagesschau',
-        release_date: '1952-12-26',
-        type: 'TV',
-        poster: 'https://image.tmdb.org/t/p/original/7dFZJ2ZJJdcmkp05B9NWlqTJ5tq.jpg',
-        backdrop: 'https://image.tmdb.org/t/p/original/jWXrQstj7p3Wl5MfYWY6IHqRpDb.jpg',
-        vote: 6.8,
-    },
-    {
         title: 'Faltu',
         original_title: 'Faltu',
         release_date: '2022-11-02',
@@ -34,15 +25,6 @@ const TV_ITEMS = [
         poster: 'https://image.tmdb.org/t/p/original/lgyFuoXs7GvKJN0mNm7z7OMOFuZ.jpg',
         backdrop: 'https://image.tmdb.org/t/p/original/t2rAdgjSh0WYbXzdOB5zTDqzdCI.jpg',
         vote: 5.1,
-    },
-    {
-        title: 'Batang Quiapo',
-        original_title: 'Batang Quiapo',
-        release_date: '2023-02-13',
-        type: 'TV',
-        poster: 'https://image.tmdb.org/t/p/original/9McqS8mgMf5NJCAKZIY6J1oOl8y.jpg',
-        backdrop: 'https://image.tmdb.org/t/p/original/1Xm0WqoT0DjZm5JdG2V6YFabrOz.jpg',
-        vote: 5.7,
     },
     {
         title: 'Invasión Secreta',
@@ -108,15 +90,6 @@ const TV_ITEMS = [
         vote: 10,
     },
     {
-        title: '하늘의 인연',
-        original_title: '하늘의 인연',
-        release_date: '2023-04-17',
-        type: 'TV',
-        poster: 'https://image.tmdb.org/t/p/original/nZrMvTX7ceYnqUiNIspd31SamUE.jpg',
-        backdrop: 'https://image.tmdb.org/t/p/original/yJEFbFax9fb8ePB0rK9UIQoXMG4.jpg',
-        vote: 4,
-    },
-    {
         title: 'Voltes V: Legacy',
         original_title: 'Voltes V: Legacy',
         release_date: '2023-05-08',
@@ -124,15 +97,6 @@ const TV_ITEMS = [
         poster: 'https://image.tmdb.org/t/p/original/8Sio0GDDIP0okgG4dez1yuKQBPW.jpg',
         backdrop: 'https://image.tmdb.org/t/p/original/fEP2Sha3PXJnAcoGOjr5oybq44Q.jpg',
         vote: 4.4,
-    },
-    {
-        title: 'कथा अनकही',
-        original_title: 'कथा अनकही',
-        release_date: '2022-12-05',
-        type: 'TV',
-        poster: 'https://image.tmdb.org/t/p/original/uhXU0SMPMlemKGHmwbldM60qqmW.jpg',
-        backdrop: 'https://image.tmdb.org/t/p/original/aqJPC5GXuiVbedajRmdOVMCb7mC.jpg',
-        vote: 9.5,
     },
 ];
 
