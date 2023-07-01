@@ -9,3 +9,11 @@ export const animatedPosterCard = (item) => {
     </div>
     `;
 };
+export const posterCard = (item) => {
+    return `
+    <div class="pb-1.5 w-56 shrink-0 bg-slate-900 rounded-lg">
+        <img class="h-80 w-56 object-cover object-[center_top] h-full w-full rounded-2xl" src="${item.poster}" alt="${item.title}" />
+        <p class=" text-center align-middle font-medium mt-2 text-xs text-ellipsis overflow-hidden">${item.title}</p>
+    </div>
+    `;
+};
