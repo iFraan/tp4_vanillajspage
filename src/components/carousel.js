@@ -1,5 +1,4 @@
 export const carouselItem = (item) => {
-    console.log(item);
     return `
     <div class="carousel-item ${item.active && 'active'} h-full w-full">
         <img class="absolute object-cover object-[center_top] h-full w-full rounded-2xl" src="${item.backdrop}" alt="${item.title}" />
