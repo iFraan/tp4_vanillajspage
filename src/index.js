@@ -9,14 +9,21 @@ const navItems = [
     {
         name: 'Discover',
         href: 'discover.html',
+        grow: true,
     },
     {
         name: 'Peliculas',
         href: 'movies.html',
+        grow: true,
     },
     {
         name: 'Series',
         href: 'tv.html',
+        grow: true,
+    },
+    {
+        name: 'Contacto',
+        href: 'contacto.html',
     },
 ];
 
@@ -24,7 +31,7 @@ const navbar = document.getElementById('navbar');
 
 /* fabricating navbar "on demand" */
 navbar.innerHTML = navItems
-    .map(({ name, href }) => {
-        return navbarItem({ name, href });
+    .map(({ name, href, grow }) => {
+        return navbarItem({ name, href, grow });
     })
     .join('');
